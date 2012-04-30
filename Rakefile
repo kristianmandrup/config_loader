@@ -17,8 +17,9 @@ Jeweler::Tasks.new do |gem|
   gem.name = "config_loader"
   gem.homepage = "http://github.com/kristianmandrup/config_loader"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Nice little utility to load config files for Rails}
+  gem.description = %Q{Load yaml and json config files and 
+ make the structures easily available for use in the app.}
   gem.email = "kmandrup@gmail.com"
   gem.authors = ["Kristian Mandrup"]
   # dependencies defined in Gemfile
