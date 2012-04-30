@@ -1,0 +1,21 @@
+# https://github.com/Shopify/active_merchant/blob/master/test/fixtures.yml
+development:
+  login: demo@quickpay.net
+  password: test234
+  api_key: MIl16LPa152HZB6wA4dN
+  version: 4
+
+cards:
+  visa_no_cvv2: 4000300011112220
+  visa: 4000100011112224
+  dankort: 5019717010103742
+
+
+test:
+  login: demo@quickpay.net
+  password: test234
+  api_key: MIl16LPa152HZB6wA4dN
+  version: 4
+
+production:
+  api_key:

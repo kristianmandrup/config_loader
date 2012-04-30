@@ -1,0 +1,14 @@
+user:
+	tenant: 700
+	landlord: 500
+	both: 20
+
+# 500 total
+property: 
+	room_share: 15
+	1_room: 50
+	2_rooms: 200
+	3_rooms: 100
+	many_rooms: 100
+	house: 30
+	house_boat: 5
