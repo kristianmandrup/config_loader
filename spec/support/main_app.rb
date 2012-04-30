@@ -15,6 +15,12 @@ module MainApp
 			@seed ||= load_yaml('config/seed.yml', :dir => 'db')
 		end
 
+		# config for the app
+		# any missing method on this is delegated to the Hashie wrapping this # loaded content
+		def config
+			@config ||= load_yaml('app.yml')
+		end
+
 		def payment_provider
 			@payment_provider ||= load_yaml('payment_gateway/quickpay.yml')
 		end
