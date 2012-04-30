@@ -5,7 +5,7 @@ module ConfigLoader
   	attr_reader :locale, :path, :file_name, :ext, :file_path, :root
 
   	# will try root element if such exists
-		def initialize file_path, options = {}			
+		def initialize file_path, options = {}
 			@path 		 	= File.dirname file_path
 			@file_name 	= File.basename file_path			
 			parts 			= file_name.split(/(ya?ml$)/)
@@ -23,6 +23,9 @@ module ConfigLoader
 
 		def as_hash
 			@as_hash ||= mashie
+		end
+
+		def load *args
 		end
 
 		protected

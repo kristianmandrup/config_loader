@@ -34,11 +34,18 @@ describe ConfigLoader::Yaml do
 		its(:root) 	 { should == 'root' }
 		specify { subject.as_hash.domain == 'www.htc.dk' }
 	end
+end
 
 describe 'Delegator' do
-		subject { config }
-		let(:config) { MainApp.config }
+	subject { config }
+	let(:config) { MainApp.config }
 
-		specify { subject.as_hash.name.should == 'HTC' }
-	end
+	specify { subject.as_hash.name.should == 'HTC' }
+end
+
+describe '.load' do
+	subject { app }
+	let(:app) { MainApp.config.app }
+
+	specify { subject.as_hash.name.should == 'HTC' }
 end

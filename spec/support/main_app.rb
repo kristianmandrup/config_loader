@@ -21,6 +21,11 @@ module MainApp
 			@config ||= load_yaml('app.yml')
 		end
 
+		# auto detect load method based on filename
+		def app
+			@app ||= load('app.yml')
+		end
+
 		def payment_provider
 			@payment_provider ||= load_yaml('payment_gateway/quickpay.yml')
 		end

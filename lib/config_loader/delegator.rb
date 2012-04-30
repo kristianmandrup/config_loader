@@ -1,12 +1,4 @@
 module ConfigLoader
-	def load_yaml *args
-		ConfigLoader::Yaml.new *args
-	end
-
-	def load_json *args
-		ConfigLoader::Json.new *args
-	end
-
 	module Delegator	
 		def self.included(base)
 			base.send :include, ConfigLoader

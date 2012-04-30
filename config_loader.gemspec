@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = "config_loader"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
   s.date = "2012-04-30"
-  s.description = "TODO: longer description of your gem"
+  s.description = "Load yaml and json config files and \n make the structures easily available for use in the app."
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -22,14 +22,17 @@ Gem::Specification.new do |s|
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
+    "README.md",
     "Rakefile",
     "VERSION",
+    "config_loader.gemspec",
     "lib/config_loader.rb",
     "lib/config_loader/base.rb",
     "lib/config_loader/delegator.rb",
     "lib/config_loader/json.rb",
     "lib/config_loader/yaml.rb",
     "spec/config_loader/yaml_spec.rb",
+    "spec/fixtures/config/app.yml",
     "spec/fixtures/config/facebook.yml",
     "spec/fixtures/config/htc.yml",
     "spec/fixtures/config/payment_gateway/quickpay.da.yml",
@@ -41,7 +44,7 @@ Gem::Specification.new do |s|
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
-  s.summary = "TODO: one-line summary of your gem"
+  s.summary = "Nice little utility to load config files for Rails"
 
   if s.respond_to? :specification_version then
     s.specification_version = 3

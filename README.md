@@ -18,9 +18,20 @@ module MainApp
 		end
 
 		# config for the app
-		# any missing method on this is delegated to the Hashie wrapping this # loaded content
+		# any missing method on this is delegated to the 
+		# Hashie wrapping this loaded content
 		def config
 			@config ||= load_yaml('app.yml')
+		end
+
+		# auto detect load method based on filename extension
+		def app
+			@app ||= load('app.yml')
+		end
+
+		# load json
+		def addresses locale = :da
+			@config ||= load 'data/addresses.json', :locale => get_locale(locale)
 		end
 
 		def payment_provider
