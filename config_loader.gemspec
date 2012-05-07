@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = "2012-04-30"
+  s.date = "2012-05-07"
   s.description = "Load yaml and json config files and \n make the structures easily available for use in the app."
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
