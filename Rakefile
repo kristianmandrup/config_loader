@@ -14,7 +14,7 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "config_loader"
+  gem.name = "rails_config_loader"
   gem.homepage = "http://github.com/kristianmandrup/config_loader"
   gem.license = "MIT"
   gem.summary = %Q{Nice little utility to load config files for Rails}
@@ -44,7 +44,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "config_loader #{version}"
+  rdoc.title = "rails_config_loader #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end

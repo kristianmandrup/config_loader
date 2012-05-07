@@ -4,7 +4,7 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "config_loader"
+  s.name = "rails_config_loader"
   s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
@@ -26,11 +26,11 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "config_loader.gemspec",
-    "lib/config_loader.rb",
     "lib/config_loader/base.rb",
     "lib/config_loader/delegator.rb",
     "lib/config_loader/json.rb",
     "lib/config_loader/yaml.rb",
+    "lib/rails_config_loader.rb",
     "spec/config_loader/yaml_spec.rb",
     "spec/fixtures/config/app.yml",
     "spec/fixtures/config/facebook.yml",

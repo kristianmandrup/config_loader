@@ -1,5 +1,5 @@
 require 'rspec'
-require 'config_loader'
+require 'rails_config_loader'
 
 SPEC_DIR = File.dirname(__FILE__)
 
