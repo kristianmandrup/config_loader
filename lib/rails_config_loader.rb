@@ -14,6 +14,10 @@ module ConfigLoader
 		loader.new file_path, options = {}
 	end
 
+	def load_hash file_path, options = {}
+		load(file_path, options).as_hash
+	end
+
 	def load_yaml file_path, options = {}
 		ConfigLoader::Yaml.new file_path, options = {}
 	end

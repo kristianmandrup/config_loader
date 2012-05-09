@@ -6,6 +6,10 @@ module Rails
 	end
 end
 
+class LoadMe
+	include ConfigLoader	
+end
+
 describe ConfigLoader::Yaml do
 	subject { config }
 	let(:config) { ConfigLoader::Yaml.new('facebook.yml') }
@@ -33,6 +37,20 @@ describe ConfigLoader::Yaml do
 
 		its(:root) 	 { should == 'root' }
 		specify { subject.as_hash.domain == 'www.htc.dk' }
+	end
+end
+
+describe ConfigLoader do
+	subject { loadme }
+
+	let(:loadme) { LoadMe.new }
+
+	describe '.load' do
+		specify { subject.load('htc.yml').as_hash.domain.should == 'www.htc.com' }
+	end
+
+	describe '.load_hash' do
+		specify { subject.load_hash('htc.yml').domain.should == 'www.htc.com' }
 	end
 end
 
