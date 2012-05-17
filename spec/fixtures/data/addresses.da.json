@@ -1,0 +1,32 @@
+[
+  {
+    "number": "004",
+    "street": "Bøllemosegårdsvej",
+    "city": "Øbro",
+    "region": "København"
+  },
+  {
+    "number": "001",
+    "street": "Bøllemosegårdsvej",
+    "city": "Venners",
+    "region": "København"
+  },
+  {
+    "number": "002",
+    "street": "Havlyngbuen",
+    "city": "Amager",
+    "region": "København"
+  },
+  {
+    "number": "001",
+    "street": "Havlyngbuen",
+    "city": "Amager",
+    "region": "København"
+  },
+  {
+    "number": "051",
+    "street": "Hedegaardsvej",
+    "city": "Engdraget",
+    "region": "København"
+  }
+  ]
