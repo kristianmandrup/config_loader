@@ -30,6 +30,13 @@ describe ConfigLoader::Yaml do
 	end
 end
 
+describe '.load_hash' do
+	subject { property }
+	let(:property) { MainApp.config.property }
+
+  specify { subject.type.house_boat.should == 'house boat' }
+end
+
 describe '.load' do
 	subject { app }
 	let(:app) { MainApp.config.app }

@@ -1,0 +1,16 @@
+property:
+  type:
+    room: room
+    apartment: apartment
+    town_house: town house
+    independent_house: independent_house
+    office: office
+    house_boat: house boat
+  rooms:
+    one: one
+    two: two
+    three: three
+    four: four
+    five: five
+    six: six
+    seven: seven or more

@@ -15,6 +15,10 @@ module MainApp
 			@seed ||= load_yaml('config/seed.yml', :dir => 'db')
 		end
 
+		def property
+			@property ||= load_hash 'property.yml'
+		end
+
 		def addresses locale = :da
 			@addresses ||= load_content '/data/addresses.json', :locale => locale
 		end

@@ -12,6 +12,8 @@ module ConfigLoader
 			@ext 			 	= parts.last
 			@locale 		= options[:locale] unless blank?(options[:locale])
 
+			@file_path = file_path
+
 			unless blank? @locale
 				@file_name = [name, @locale, @ext].compact.join('.')
 				@file_path =  File.join(@path, @file_name)
@@ -38,7 +40,6 @@ module ConfigLoader
 		def blank? obj
 			!obj || obj.empty?
 		end
-
 
 		def file_content
 			File.open(config_file_path)
