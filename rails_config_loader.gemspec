@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = "rails_config_loader"
-  s.version = "0.1.3"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
@@ -39,6 +39,7 @@ Gem::Specification.new do |s|
     "spec/fixtures/config/facebook.yml",
     "spec/fixtures/config/htc.yml",
     "spec/fixtures/config/payment_gateway/quickpay.da.yml",
+    "spec/fixtures/config/property.yml",
     "spec/fixtures/data/addresses.da.json",
     "spec/fixtures/db/config/seed.yml",
     "spec/spec_helper.rb",
