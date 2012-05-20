@@ -31,7 +31,7 @@ module MainApp
 
 		# load json
 		def addresses locale = :da
-			@config ||= load 'data/addresses.json', :locale => get_locale(locale)
+			@config ||= load_content '/data/addresses.json', :locale => get_locale(locale)
 		end
 
 		def payment_provider

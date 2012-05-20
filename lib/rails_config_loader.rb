@@ -11,7 +11,11 @@ module ConfigLoader
 		when :yml, :yaml
 			ConfigLoader::Yaml
 		end
-		loader.new file_path, options = {}
+		loader.new file_path, options
+	end
+
+	def load_content file_path, options = {}
+		load(file_path, options).content
 	end
 
 	def load_hash file_path, options = {}
@@ -25,4 +29,8 @@ module ConfigLoader
 	def load_json file_path, options = {}
 		ConfigLoader::Json.new file_path, options = {}
 	end
+
+	def load_json_content file_path, options = {}
+		load_json(file_path, options).content
+	end	
 end
