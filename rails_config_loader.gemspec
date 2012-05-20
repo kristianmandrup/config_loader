@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "rails_config_loader"
-  s.version = "0.1.2"
+  s.version = "0.1.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kristian Mandrup"]
-  s.date = "2012-05-09"
+  s.date = "2012-05-20"
   s.description = "Load yaml and json config files and \n make the structures easily available for use in the app."
   s.email = "kmandrup@gmail.com"
   s.extra_rdoc_files = [
@@ -31,11 +31,15 @@ Gem::Specification.new do |s|
     "lib/config_loader/yaml.rb",
     "lib/rails_config_loader.rb",
     "rails_config_loader.gemspec",
+    "spec/config_loader/delegator_spec.rb",
+    "spec/config_loader/json_spec.rb",
     "spec/config_loader/yaml_spec.rb",
+    "spec/config_loader_spec.rb",
     "spec/fixtures/config/app.yml",
     "spec/fixtures/config/facebook.yml",
     "spec/fixtures/config/htc.yml",
     "spec/fixtures/config/payment_gateway/quickpay.da.yml",
+    "spec/fixtures/data/addresses.da.json",
     "spec/fixtures/db/config/seed.yml",
     "spec/spec_helper.rb",
     "spec/support/main_app.rb"
