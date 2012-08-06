@@ -1,0 +1,14 @@
+[
+  {
+    "number": "004",
+    "street": "King street",
+    "city": "Chelsea",
+    "region": "London"
+  },
+  {
+    "number": "002",
+    "street": "Prince street",
+    "city": "Chelsea",
+    "region": "London"
+  }
+]

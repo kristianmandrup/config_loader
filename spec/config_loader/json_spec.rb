@@ -2,9 +2,30 @@
 
 require 'spec_helper'
 
+
 describe ConfigLoader::Json do
   subject { config }
-  let(:config) { ConfigLoader::Json.new '/data/addresses.json', :locale => 'da' }
+  let(:config) { ConfigLoader::Json.new '/data/addresses.json', :locale => 'en' }
+
+  its(:file_name) { should == 'addresses_en.json' }
+end
+
+module I18n
+  def self.locale
+    :da
+  end
+end
+
+describe ConfigLoader::Json do
+  before :all do
+    ConfigLoader.config do |c|
+      c.locale_spacer = '.'
+      c.locale_on!
+    end
+  end
+
+  subject { config }
+  let(:config) { ConfigLoader::Json.new '/data/addresses.json', :locale => true }
 
   its(:file_name) { should == 'addresses.da.json' }
   its(:root)      { should be_nil }
@@ -15,7 +36,7 @@ describe ConfigLoader::Json do
 
   describe 'implicit json' do
     subject { config }
-    let(:config) { ConfigLoader::Json.new(:enum) }
+    let(:config) { ConfigLoader::Json.new :enum, :locale => false  }
 
     its(:root)   { should == nil }
     specify { subject.as_hash.answer == 'yes' }

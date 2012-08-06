@@ -17,11 +17,15 @@ module MainApp
 			@seed ||= load_yml :seed, :dir => 'db')
 		end
 
+		def enums
+			@seed ||= load_yml :enums, :locale => true # use I18n.locale
+		end
+
 		# config for the app
 		# any missing method on this is delegated to the 
 		# Hashie wrapping this loaded content
 		def config
-			@config ||= load_yml :app
+			@config ||= load_yml :app, :locale => false
 		end
 
 		# auto detect load method based on filename extension
@@ -40,6 +44,21 @@ module MainApp
 	end
 end
 ```
+
+## Configuration
+
+```ruby
+ConfigLoader.config do |c|
+	c.locale_spacer = '.'
+	c.locale_on!
+end
+```
+
+Will load locale files like `enums_en.yml`. The default is the form: `enums_en.yml`
+
+## TODO
+
+`base.rb` needs heavy refactoring! Code has become ugly as hell!!!
 
 ## Contributing to config_loader
  
