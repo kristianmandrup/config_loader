@@ -14,28 +14,28 @@ module MainApp
 
 		# load seed file (see geo-autocomplete demo)
 		def seed
-			@seed ||= load_yaml('config/seed.yml', :dir => 'db')
+			@seed ||= load_yml :seed, :dir => 'db')
 		end
 
 		# config for the app
 		# any missing method on this is delegated to the 
 		# Hashie wrapping this loaded content
 		def config
-			@config ||= load_yaml('app.yml')
+			@config ||= load_yml :app
 		end
 
 		# auto detect load method based on filename extension
 		def app
-			@app ||= load('app.yml')
+			@app ||= load 'app.yml'
 		end
 
-		# load json
+		# load json content
 		def addresses locale = :da
 			@config ||= load_content '/data/addresses.json', :locale => get_locale(locale)
 		end
 
 		def payment_provider
-			@payment_provider ||= load_yaml('payment_gateway/quickpay.yml')
+			@payment_provider ||= load_yaml 'payment_gateway/quickpay'
 		end
 	end
 end

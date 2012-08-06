@@ -13,6 +13,14 @@ describe ConfigLoader::Yaml do
 
 	specify { subject.as_hash.domain == 'www.facebook.com' }
 
+	describe 'implicit yml' do
+		subject { config }
+		let(:config) { ConfigLoader::Yaml.new(:htc) }
+
+		its(:root) 	 { should == nil }
+		specify { subject.as_hash.domain == 'www.htc.com' }
+	end
+
 	describe 'no root' do
 		subject { config }
 		let(:config) { ConfigLoader::Yaml.new('htc.yml') }

@@ -5,9 +5,10 @@ module ConfigLoader
   	attr_reader :locale, :path, :file_name, :ext, :file_path, :root
 
   	# will try root element if such exists
-		def initialize file_path, options = {}
+		def initialize file_path, options = {}			
 			@path 		 	= File.dirname file_path
 			@file_name 	= File.basename file_path			
+
 			name 				= parts.first.sub(/\.$/, '')
 			@ext 			 	= parts.last
 			@locale 		= options[:locale] unless blank?(options[:locale])
@@ -36,6 +37,14 @@ module ConfigLoader
 		end
 
 		protected
+
+    def parts
+      @parts ||= file_name.split(/(#{reg_ext_format})$/)
+    end
+
+    def path? file_path
+      file_path.kind_of?(String) && file_path =~ /\.#{reg_ext_format}/
+    end
 
 		def blank? obj
 			!obj || obj.empty?

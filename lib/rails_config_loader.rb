@@ -23,7 +23,11 @@ module ConfigLoader
 	end
 
 	def load_yaml file_path, options = {}
-		ConfigLoader::Yaml.new file_path, options = {}
+		ConfigLoader::Yaml.new file_path, options = {:default_ext => :yaml}
+	end
+
+	def load_yml file_path, options = {}
+		ConfigLoader::Yaml.new file_path, options = {:default_ext => :yml}
 	end
 
 	def load_json file_path, options = {}
